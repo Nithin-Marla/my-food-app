@@ -1,17 +1,11 @@
 import { LuMilk } from "react-icons/lu";
 import "./Milk.css";
 import { toast } from "react-toastify";
+import type { Product } from "./interfaces/Product";
 
-interface MilkItem {
-  id: number;
-  name: string;
-  imageUrl: string;
-  price: number;
-  description: string;
-}
 
 function Milk() {
-  const milkItems: MilkItem[] = [
+  const milkItems: Product[] = [
     {
       id: 1,
       name: "Butter Milk",

@@ -1,17 +1,11 @@
 import { GiChickenOven } from "react-icons/gi";
 import "./NonVeg.css";
 import { toast } from "react-toastify";
+import type { Product } from "./interfaces/Product";
 
-interface NonVegItem {
-  id: number;
-  name: string;
-  imageUrl: string;
-  price: number;
-  description: string;
-}
 
 function NonVeg() {
-  const nonVegItems: NonVegItem[] = [
+  const nonVegItems: Product[] = [
     { id: 1, name: "Chicken", imageUrl: "images/nonveg/chicken.webp", price: 280, description: "Fresh farm chicken" },
     { id: 4, name: "Eggs", imageUrl: "images/nonveg/eggs.png", price: 90, description: "Fresh farm eggs" },
     { id: 3, name: "Duck", imageUrl: "images/nonveg/duck.png", price: 380, description: "Fresh country duck" },

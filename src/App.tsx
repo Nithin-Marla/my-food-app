@@ -11,9 +11,16 @@ import { GiChickenOven } from "react-icons/gi";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./components/Register";
+import Login from "./components/Login";
+import { useContext } from "react";
+import { CartContext } from "./contextApi/CartContext";
+import Cart from "./components/Cart";
 
 
 function App() {
+
+  let {cart} = useContext(CartContext);
+
   return (
     <BrowserRouter>
       <div className="app-container">
@@ -24,6 +31,9 @@ function App() {
           <NavLink className="nav-link" to="/non-veg-items"><GiChickenOven size={30}/>Non Veg Items</NavLink>
           <NavLink className="nav-link" to="/milk-items"><LuMilk size={30}/>Milk Items</NavLink>
           <NavLink className="nav-link" to="/register">Register</NavLink>
+          <NavLink className="nav-link" to="/cart">Cart {cart.length} </NavLink>
+
+
 
         </nav>
 
@@ -34,6 +44,10 @@ function App() {
             <Route path="/non-veg-items" element={<NonVeg />} />
             <Route path="/milk-items" element={<Milk />} />
             <Route path="/register" element={<Register/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/cart" element={<Cart/>} />
+
+
           </Routes>
         </div>
 

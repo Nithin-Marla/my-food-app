@@ -1,7 +1,8 @@
 
 import type { RegisterRequest } from "../interfaces/RegisterRequest";
 import { useForm } from "react-hook-form";
-import { servieRegister } from "../services/AuthService";
+import { serviceRegister } from "../services/AuthService";
+import { Link } from "react-router-dom";
 
 function Register() {
 
@@ -9,7 +10,7 @@ function Register() {
 
  const onSubmitLogics = async (data:RegisterRequest) => {
       try {
-            const response = await servieRegister(data);
+            const response = await serviceRegister(data);
             alert("Registration Success");
             console.log(response);
             reset();
@@ -62,6 +63,12 @@ function Register() {
 
 
       <button type="submit">Register</button>
+
+       <br /><br />
+
+       <p>
+        Already have an account? <Link to={"/login"}>Login</Link>
+       </p>
 
     </form>
   );
