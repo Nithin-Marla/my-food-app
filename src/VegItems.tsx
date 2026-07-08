@@ -91,15 +91,33 @@ function VegItems() {
       <ul className="veg-container">
         {vegItems.map((veg) => (
           <li key={veg.id} className="veg-card">
+<div className="offer-badge">
+    20% OFF
+</div>
+
+<div className="delivery-tag">
+    ⏱ 10 min
+</div>
+
             <img
               src={veg.imageUrl}
               alt={veg.name}
               className="veg-image"
             />
 
-            <h3 className="veg-name">{veg.name}</h3>
+            <h3 className="veg-name">
+              <div className="veg-rating">
+
+★★★★★
+
+</div>{veg.name}</h3>
 
             <p className="veg-description">
+              <p className="veg-weight">
+
+500 g
+
+</p>
               {veg.description}
             </p>
 

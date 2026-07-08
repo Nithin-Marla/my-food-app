@@ -1,8 +1,9 @@
-
+import "./Register.css";
 import type { RegisterRequest } from "../interfaces/RegisterRequest";
 import { useForm } from "react-hook-form";
 import { serviceRegister } from "../services/AuthService";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify/unstyled";
 
 function Register() {
 
@@ -11,7 +12,7 @@ function Register() {
  const onSubmitLogics = async (data:RegisterRequest) => {
       try {
             const response = await serviceRegister(data);
-            alert("Registration Success");
+            toast.success("Registration Successful 🎉");
             console.log(response);
             reset();
         } catch (error) {
@@ -20,9 +21,18 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmitLogics)}>
+    <div className="register-page">
+
+<div className="register-card">
+
+<h1>Create Account 🚀</h1>
+
+<p>Join FreshMart and start shopping today</p>
+
+<form onSubmit={handleSubmit(onSubmitLogics)}>
 
       <input
+className="register-input"
         type="text"
         {...register("name")}
         placeholder="Username"
@@ -31,6 +41,7 @@ function Register() {
       <br /><br />
 
       <input
+className="register-input"
         type="email"
         {...register("email")}
         placeholder="Email"
@@ -39,6 +50,7 @@ function Register() {
       <br /><br />
 
       <input
+className="register-input"
         type="number"
         {...register("phone")}
         placeholder="Phone"
@@ -47,6 +59,7 @@ function Register() {
       <br /><br />
 
       <input
+className="register-input"
         type="password"
         {...register("password")}
         placeholder="Password"
@@ -54,7 +67,10 @@ function Register() {
 
       <br /><br />
 
-       <select {...register("role")}>
+       <select
+className="register-input"
+{...register("role")}
+>
       <option value="ROLE_CUSTOMER">Customer</option>
       <option value="ROLE_ADMIN">Admin</option>
     </select>
@@ -62,15 +78,20 @@ function Register() {
       <br /><br />
 
 
-      <button type="submit">Register</button>
+      <button
+className="register-btn"
+type="submit">Register</button>
 
        <br /><br />
 
-       <p>
+       <p className="login-link">
         Already have an account? <Link to={"/login"}>Login</Link>
        </p>
 
     </form>
+    </div>
+
+</div>
   );
 }
 

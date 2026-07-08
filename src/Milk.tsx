@@ -2,9 +2,14 @@ import { LuMilk } from "react-icons/lu";
 import "./Milk.css";
 import { toast } from "react-toastify";
 import type { Product } from "./interfaces/Product";
+import { useContext } from "react";
+import { CartContext } from "./contextApi/CartContext";
 
 
 function Milk() {
+
+      const { addToCart } = useContext(CartContext);
+
   const milkItems: Product[] = [
     {
       id: 1,
@@ -85,15 +90,32 @@ function Milk() {
       <ul className="milk-container">
         {milkItems.map((milkItem) => (
           <li key={milkItem.id} className="milk-card">
+            <div className="offer-badge">
+    Fresh Today
+</div>
+
+<div className="delivery-tag">
+    🚚 15 min
+</div>
             <img
               src={milkItem.imageUrl}
               alt={milkItem.name}
               className="milk-image"
             />
 
-            <h3 className="milk-name">{milkItem.name}</h3>
+            <h3 className="milk-name">
+              <div className="milk-rating">
+
+★★★★★
+
+</div>{milkItem.name}</h3>
 
             <p className="milk-description">
+              <p className="milk-weight">
+
+500 ml
+
+</p>
               {milkItem.description}
             </p>
 
@@ -102,7 +124,10 @@ function Milk() {
                 ₹{milkItem.price}
               </span>
 
-              <button className="milk-btn" onClick={() => toast.success(`${milkItem.name} added to cart successfully!`)}>
+              <button className="milk-btn" onClick={() => {
+                addToCart(milkItem);
+                toast.success(`${milkItem.name} added to cart successfully!`);
+              }}>
                 Add to Cart
               </button>
             </div>

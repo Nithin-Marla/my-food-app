@@ -17,6 +17,12 @@ function Home() {
 
         <div className="hero-content">
 
+          <div className="discountBadge">
+
+            🔥 Flat 30% OFF
+
+          </div>
+
           <span className="hero-tag">
             Fresh • Premium • Delivered
           </span>
@@ -44,6 +50,40 @@ function Home() {
       </div>
 
       {/* Categories Section */}
+
+      <div className="whyChoose">
+
+<div className="whyCard">
+
+🚚
+
+<h3>Fast Delivery</h3>
+
+<p>Delivered within 30 minutes</p>
+
+</div>
+
+<div className="whyCard">
+
+🥬
+
+<h3>Farm Fresh</h3>
+
+<p>Directly sourced from farms</p>
+
+</div>
+
+<div className="whyCard">
+
+💰
+
+<h3>Best Prices</h3>
+
+<p>Affordable prices everyday</p>
+
+</div>
+
+</div>
 
       <div className="categories-section">
 

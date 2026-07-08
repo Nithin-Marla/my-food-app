@@ -2,9 +2,13 @@ import { GiChickenOven } from "react-icons/gi";
 import "./NonVeg.css";
 import { toast } from "react-toastify";
 import type { Product } from "./interfaces/Product";
+import { useContext } from "react";
+import { CartContext } from "./contextApi/CartContext";
 
 
 function NonVeg() {
+   const { addToCart } = useContext(CartContext);
+
   const nonVegItems: Product[] = [
     { id: 1, name: "Chicken", imageUrl: "images/nonveg/chicken.webp", price: 280, description: "Fresh farm chicken" },
     { id: 4, name: "Eggs", imageUrl: "images/nonveg/eggs.png", price: 90, description: "Fresh farm eggs" },
@@ -26,15 +30,32 @@ function NonVeg() {
       <ul className="nonveg-container">
         {nonVegItems.map((item) => (
           <li key={item.id} className="nonveg-card">
+            <div className="offer-badge">
+    15% OFF
+</div>
+
+<div className="delivery-tag">
+    🚚 20 min
+</div>
             <img
               src={item.imageUrl}
               alt={item.name}
               className="nonveg-image"
             />
 
-            <h3 className="nonveg-name">{item.name}</h3>
+            <h3 className="nonveg-name">
+              <div className="nonveg-rating">
+
+★★★★★
+
+</div>{item.name}</h3>
 
             <p className="nonveg-description">
+              <p className="nonveg-weight">
+
+500 g
+
+</p>
               {item.description}
             </p>
 
@@ -42,10 +63,16 @@ function NonVeg() {
               <span className="nonveg-price">
                 ₹{item.price}/kg
               </span>
-
-              <button className="nonveg-btn" onClick={() => toast.success(`${item.name} added to cart successfully!`)}>
-                Add to Cart
-              </button>
+            
+              <button
+  className="nonveg-btn"
+  onClick={() => {
+    addToCart(item);
+    toast.success(`${item.name} added to cart successfully!`);
+  }}
+>
+  Add to Cart
+</button>
             </div>
           </li>
         ))}
