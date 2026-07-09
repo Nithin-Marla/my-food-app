@@ -23,8 +23,6 @@ function Checkout() {
 
   const finalAmount = location.state?.finalAmount || 0;
 
-  const [step, setStep] = useState(1);
-
   const [customer, setCustomer] = useState({
 
     name: "",

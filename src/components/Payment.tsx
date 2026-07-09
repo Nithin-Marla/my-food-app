@@ -5,7 +5,6 @@ import QRCode from "react-qr-code";
 import {
   FaMoneyBillWave,
   FaMobileAlt,
-  FaGooglePay,
   FaShieldAlt
 } from "react-icons/fa";
 
