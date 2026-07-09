@@ -110,16 +110,18 @@ function VegItems() {
 
 ★★★★★
 
-</div>{veg.name}</h3>
+</div>
+              {veg.name}
+            </h3>
 
-            <p className="veg-description">
-              <p className="veg-weight">
-
-500 g
-
-</p>
-              {veg.description}
-            </p>
+            <div className="veg-description">
+              <span className="veg-weight">
+                500 g
+              </span>
+              <p>
+                {veg.description}
+              </p>
+            </div>
 
             <div className="veg-footer">
               <span className="veg-price">

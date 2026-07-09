@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+        PAGE
+=========================== */
+
+.success-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#ecfdf5,#f8fafc);
+
+    padding:50px;
+
+}
+
+/* ===========================
+        CARD
+=========================== */
+
+.success-card{
+
+    width:750px;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    animation:fadeIn .6s ease;
+
+}
+
+/* ===========================
+        SUCCESS ICON
+=========================== */
+
+.success-circle{
+
+    width:100px;
+
+    height:100px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:55px;
+
+    font-weight:bold;
+
+    animation:pop .5s ease;
+
+}
+
+.success-card h1{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#15803d;
+
+}
+
+.success-card>p{
+
+    text-align:center;
+
+    margin-top:12px;
+
+    color:#6b7280;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+      DETAILS
+=========================== */
+
+.success-details{
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+    padding:25px;
+
+}
+
+.success-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.success-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.success-row span{
+
+    color:#6b7280;
+
+}
+
+.success-row strong{
+
+    color:#111827;
+
+}
+
+/* ===========================
+      ADDRESS
+=========================== */
+
+.address-box{
+
+    margin-top:30px;
+
+    padding:20px;
+
+    border-left:5px solid #22c55e;
+
+    background:#f0fdf4;
+
+    border-radius:12px;
+
+}
+
+.address-box h3{
+
+    color:#15803d;
+
+    margin-bottom:10px;
+
+}
+
+.address-box p{
+
+    color:#374151;
+
+    line-height:1.6;
+
+}
+/* ===========================
+      DELIVERY PROGRESS
+=========================== */
+
+.delivery-progress{
+
+    margin-top:35px;
+
+    background:#f9fafb;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+.delivery-progress h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#111827;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#e5e7eb;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:35%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+
+    border-radius:30px;
+
+    animation:loading 2s infinite alternate;
+
+}
+
+.progress-steps{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:18px;
+
+    font-size:14px;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.progress-steps span{
+
+    color:#9ca3af;
+
+    font-weight:500;
+
+}
+
+.progress-steps .active{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+      BUTTON
+=========================== */
+
+.continue-shopping-btn{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.continue-shopping-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(34,197,94,.35);
+
+}
+
+/* ===========================
+      ANIMATIONS
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(0);
+
+    }
+
+    70%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes loading{
+
+    from{
+
+        width:20%;
+
+    }
+
+    to{
+
+        width:60%;
+
+    }
+
+}
+
+/* ===========================
+      RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.success-page{
+
+    padding:20px;
+
+}
+
+.success-card{
+
+    width:100%;
+
+    padding:25px;
+
+}
+
+.success-card h1{
+
+    font-size:28px;
+
+}
+
+.success-row{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+}

@@ -1,0 +1,898 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* ============================
+        PAGE
+============================= */
+
+.checkout-page{
+
+    min-height:100vh;
+
+    background:#f4f7fb;
+
+    padding:50px 80px;
+
+}
+
+/* ============================
+        HEADER
+============================= */
+
+.checkout-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.checkout-header h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+}
+
+.checkout-header p{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ============================
+        MAIN
+============================= */
+
+.checkout-main{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+}
+
+/* ============================
+        LEFT
+============================= */
+
+.checkout-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ============================
+        CARD
+============================= */
+
+.checkout-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.card-title svg{
+
+    font-size:34px;
+
+    color:#16a34a;
+
+}
+
+.card-title h2{
+
+    font-size:28px;
+
+    color:#111827;
+
+}
+
+.card-title span{
+
+    color:#6b7280;
+
+    font-size:15px;
+
+}
+/* ============================
+        INPUT GROUP
+============================= */
+
+.input-group{
+
+    margin-bottom:24px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    margin-bottom:10px;
+
+}
+
+/* ============================
+        INPUT BOX
+============================= */
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#f9fafb;
+
+    border:2px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:0 18px;
+
+    transition:.3s;
+
+}
+
+.input-box:hover{
+
+    border-color:#22c55e;
+
+    box-shadow:0 6px 18px rgba(34,197,94,.12);
+
+}
+
+.input-box:focus-within{
+
+    border-color:#16a34a;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+.input-icon{
+
+    color:#16a34a;
+
+    font-size:18px;
+
+    min-width:20px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    padding:18px 5px;
+
+    font-size:16px;
+
+    color:#111827;
+
+}
+
+.input-box input::placeholder{
+
+    color:#9ca3af;
+
+}
+
+/* ============================
+        TEXTAREA
+============================= */
+
+.textarea-box{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    background:#f9fafb;
+
+    border:2px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:16px 18px;
+
+    transition:.3s;
+
+}
+
+.textarea-box:hover{
+
+    border-color:#22c55e;
+
+    box-shadow:0 6px 18px rgba(34,197,94,.12);
+
+}
+
+.textarea-box:focus-within{
+
+    border-color:#16a34a;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+.textarea-icon{
+
+    margin-top:5px;
+
+}
+
+.textarea-box textarea{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    resize:none;
+
+    background:transparent;
+
+    min-height:120px;
+
+    font-size:16px;
+
+    color:#111827;
+
+}
+
+.textarea-box textarea::placeholder{
+
+    color:#9ca3af;
+
+}
+
+/* ============================
+        BUTTON
+============================= */
+
+.continue-btn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(90deg,#16a34a,#22c55e);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.continue-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(34,197,94,.30);
+
+}
+/* ====================================
+            RIGHT SIDE
+==================================== */
+
+.checkout-right{
+
+    position:sticky;
+
+    top:100px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ====================================
+          ORDER SUMMARY
+==================================== */
+
+.summary-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.summary-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.summary-header svg{
+
+    font-size:30px;
+
+    color:#16a34a;
+
+}
+
+.summary-header h2{
+
+    font-size:24px;
+
+    color:#111827;
+
+}
+
+.summary-header span{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+/* ====================================
+            SUMMARY ROW
+==================================== */
+
+.summary-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0;
+
+    color:#374151;
+
+    font-size:16px;
+
+}
+
+.summary-item strong{
+
+    font-weight:600;
+
+}
+
+.green-text{
+
+    color:#16a34a;
+
+}
+
+.summary-card hr{
+
+    margin:20px 0;
+
+    border:none;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+/* ====================================
+            TOTAL
+==================================== */
+
+.summary-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.summary-total span{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.summary-total h2{
+
+    color:#16a34a;
+
+    font-size:30px;
+
+}
+
+/* ====================================
+            SAVINGS CARD
+==================================== */
+
+.saving-card{
+
+    margin-top:25px;
+
+    background:#ecfdf5;
+
+    border-left:5px solid #22c55e;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    color:#166534;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.saving-card strong{
+
+    color:#15803d;
+
+}
+/* ====================================
+        FEATURE CARDS
+==================================== */
+
+.features-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.feature-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.feature-card svg{
+
+    width:55px;
+
+    height:55px;
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+    border-radius:50%;
+
+    padding:15px;
+
+    font-size:22px;
+
+}
+
+.feature-card h4{
+
+    color:#111827;
+
+    font-size:16px;
+
+    margin-bottom:4px;
+
+}
+
+.feature-card p{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+/* ====================================
+        HELP CARD
+==================================== */
+
+.help-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.help-icon{
+
+    width:75px;
+
+    height:75px;
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+    border-radius:50%;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+.help-card h3{
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.help-card p{
+
+    color:#6b7280;
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+.help-card button{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:#16a34a;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.help-card button:hover{
+
+    background:#15803d;
+
+    transform:translateY(-2px);
+
+}
+/* ====================================
+        RESPONSIVE DESIGN
+==================================== */
+
+@media (max-width: 1100px){
+
+.checkout-main{
+
+    grid-template-columns:1fr;
+
+}
+
+.checkout-right{
+
+    position:relative;
+
+    top:0;
+
+}
+
+.features-section{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.checkout-page{
+
+    padding:20px;
+
+}
+
+.checkout-header h1{
+
+    font-size:32px;
+
+}
+
+.checkout-card{
+
+    padding:25px;
+
+}
+
+.summary-card{
+
+    padding:25px;
+
+}
+
+.features-section{
+
+    grid-template-columns:1fr;
+
+}
+
+.feature-card{
+
+    width:100%;
+
+}
+
+.input-box input{
+
+    font-size:15px;
+
+}
+
+.textarea-box textarea{
+
+    font-size:15px;
+
+}
+
+.summary-total h2{
+
+    font-size:26px;
+
+}
+
+}
+
+/* ====================================
+        SCROLLBAR
+==================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#16a34a;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#15803d;
+
+}
+
+/* ====================================
+        ANIMATIONS
+==================================== */
+
+.checkout-card,
+.summary-card,
+.help-card,
+.feature-card{
+
+    animation:slideUp .6s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.continue-btn,
+.help-card button{
+
+    transition:all .3s ease;
+
+}
+
+.continue-btn:hover,
+.help-card button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.summary-card:hover,
+.checkout-card:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+}
+
+/* ====================================
+        PREMIUM BADGES
+==================================== */
+
+.checkout-header::after{
+
+    content:"Trusted by 10,000+ Customers";
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
