@@ -40,21 +40,29 @@ function App() {
 
             <div className="brand-logo">
 
-              <div className="brand-icon">
+    <div className="logo-icon">
 
-                🛒
+        ⚡
 
-              </div>
+    </div>
 
-              <div className="brand-text">
+    <div className="brand-heading">
 
-                <h2>QuickCart</h2>
+        <h1>
 
-                <span>Fresh Groceries</span>
+            Quick<span>Cart</span>
 
-              </div>
+        </h1>
 
-            </div>
+        <p>
+
+            Groceries Delivered in Minutes
+
+        </p>
+
+    </div>
+
+</div>
 
             <NavLink className="nav-link" to="/">
               🏠 Home

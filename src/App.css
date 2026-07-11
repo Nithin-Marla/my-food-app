@@ -372,3 +372,61 @@ padding:20px;
 
 
 }
+
+.brand-logo{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+}
+
+.logo-icon{
+
+width:60px;
+
+height:60px;
+
+background:linear-gradient(135deg,#16a34a,#22c55e);
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+color:white;
+
+box-shadow:0 10px 25px rgba(22,163,74,.4);
+
+}
+
+.brand-heading h1{
+
+font-size:32px;
+
+font-weight:800;
+
+color:#111827;
+
+}
+
+.brand-heading span{
+
+color:#16a34a;
+
+}
+
+.brand-heading p{
+
+color:#6b7280;
+
+font-size:13px;
+
+}
